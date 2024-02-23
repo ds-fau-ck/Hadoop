@@ -4,3 +4,13 @@ Bult on top of Hadoop
 Typical SQL kind of framework
 Logic will be converted to map reduce code
 Hive read data from HDFS-> Hive convert  SQL into map reduce(intermediate output)->Result.
+Map->key, value
+Reduce-(sort and shuffle)>Hold all types of values from map output where keys are generating the same value
+Metastore-> which will hold the metadata 
+
+Internal table
+-> metadata will be maintain by hive
+->Actual data will be stored in hive warehouse
+External table
+->metadata will be maintain by Hive
+->Actual data will be at source location.
