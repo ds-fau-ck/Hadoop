@@ -7,3 +7,11 @@ Job Tracker->It will control the overal execution in cluster, allocate the task 
 Combination of name node and job tracker is called as a master.
 Task tracker->It always runs on individual machine and control individual processing.
 Data Node->It hold the actual data and process it
+
+Primary name node and secondary name node-----------
+File system image at t=0 in Primary node
+Check pointing->
+In secondary name node---Edit file- store all the information starting from 0 to 28s also store previous fs image at time t=0.
+Hadoop_2
+Introduce YARN(Yet another resource negociator)
+Node manager inside of slave
