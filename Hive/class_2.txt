@@ -23,3 +23,6 @@ create external table department_data_external
     > row format delimited                                                                                                                    
     > fields terminated by ','                                                                                                                
     > location '/tmp/hive_data_class_2/'; 
+
+Internal table: Metada in hive and original raw data in hive
+External tables only metadata in Hive
