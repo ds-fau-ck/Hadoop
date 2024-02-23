@@ -1,0 +1,9 @@
+Mjor difference between Hadoop1 and Hadoop2
+Hadoop1->Major component
+Master->Never store any kind of data- Its always try to store metadata. Metadata is data of data. whatever happen in Slave(DN1,DN2, DN3....)always inform to master 
+Name Node-(Name node is already aware about in which system i have free space)hold meta information, memory mapping
+Job Tracker->It will control the overal execution in cluster, allocate the task depens upon the request from the client, 
+      monitor and maintain the task, find out who is going to execute the particular task. 
+Combination of name node and job tracker is called as a master.
+Task tracker->It always runs on individual machine and control individual processing.
+Data Node->It hold the actual data and process it
