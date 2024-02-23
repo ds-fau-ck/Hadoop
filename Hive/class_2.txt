@@ -1,6 +1,14 @@
 
+###Copy from local 
+cp /home/cloudera/depart_data.csv /tmp/hive_class_2/
+-----------------load data from local to hive----------------
 load data local inpath 'file:///home/cloudera/hive_class2/dept_data.csv' into table department_data;
            --whenever we work with local file system we need to help hive in order to pass the file path successfully 
            --because its try to find the path in local system.
            --Since its local file system URI for local file system will be different so we need to add file://
 select count(*) from department_data;
+#Display column name
+set hive.cli.print.header=true;
+---------------------------load data hadoop to Hive------------------
+load data inpath '/tmp/hive_class_2/' into table department_data_from_hdfs;
+
