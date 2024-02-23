@@ -1,1 +1,6 @@
-H
+why Hive?
+Simple to use
+Bult on top of Hadoop
+Typical SQL kind of framework
+Logic will be converted to map reduce code
+Hive read data from HDFS-> Hive convert  SQL into map reduce(intermediate output)->Result.
