@@ -1,1 +1,6 @@
 
+load data local inpath 'file:///home/cloudera/hive_class2/dept_data.csv' into table department_data;
+           --whenever we work with local file system we need to help hive in order to pass the file path successfully 
+           --because its try to find the path in local system.
+           --Since its local file system URI for local file system will be different so we need to add file://
+select count(*) from department_data;
