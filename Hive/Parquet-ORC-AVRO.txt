@@ -1,4 +1,9 @@
 columnar-format
 
 The values for each column will be stored in a contigious memory location instead of entire row in a contigious memory location.
-NoSQL-Key-value, document, columnar For frequent or heavy analytical query
+NoSQL-Key-value, document, columnar For frequent or heavy analytical queres prefer columnar format or columnar NO-SQL DBs
+
+"In the columnar format what is happening?-> lets say i have written a query "select sum(salary) from  table_1;" My data store in columnar format 
+and my disk reader or query engine which i am using its knows what could be the starting memory location for the salary coulmn and it will directly 
+point  to the salary memory location and since every values are stored in contigious memory location for the salary column, i just keep on taking 
+the summation and my time will not be waisted in order to scan the unnecessary column values"
