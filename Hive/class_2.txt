@@ -26,6 +26,20 @@ create external table department_data_external
 
 Internal table: Metada in hive and original raw data in hive
 External tables only metadata in Hive
+
+# work with Array data types
+
+create table employee                                                                                                                   
+    > (                                                                                                                                       
+    > id int,                                                                                                                                 
+    > name string,                                                                                                                            
+    > skills array<string>                                                                                                                    
+    > )                                                                                                                                       
+    > row format delimited                                                                                                                    
+    > fields terminated by ','                                                                                                                
+    > collection items terminated by ':';                                                                                                     
+
+load data local inpath 'file:///tmp/hive_class/array_data.csv' into table employee; 
 ####################How tocreate  back up table tada---
 create table sales_table_backup  as select * from sales_data_v2;
 ###################details about the table############
