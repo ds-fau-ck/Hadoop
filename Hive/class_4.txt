@@ -1,1 +1,26 @@
 
+# use this command to get details about serilization and deserialization
+
+describe formatted sales_data_pq_final;
+
+
+# create table as CSV SerDe
+
+create table csv_table                                                                                                                  
+    > (                                                                                                                                       
+    > name string,                                                                                                                            
+    > location string                                                                                                                         
+    > )                                                                                                                                       
+    > row format serde 'org.apache.hadoop.hive.serde2.OpenCSVSerde'                                                                           
+    > with serdeproperties (                                                                                                                  
+    >  "separatorChar" = ",",                                                                                                                 
+    >  "quoteChar" = "\"",                                                                                                                    
+    >  "escapeChar" = "\\"                                                                                                                    
+    > )                                                                                                                                       
+    > stored as textfile                                                                                                                      
+    > tblproperties ("skip.header.line.count" = "1"); 
+    
+# load data from local
+
+load data local inpath 'file:///tmp/hive_class/csv_file.csv' into table csv_table;
+    
