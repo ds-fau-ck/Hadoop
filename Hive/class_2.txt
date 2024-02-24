@@ -26,3 +26,5 @@ create external table department_data_external
 
 Internal table: Metada in hive and original raw data in hive
 External tables only metadata in Hive
+How to back up table tada---
+create table sales_table_backup  as select * from sales_data_v2;
