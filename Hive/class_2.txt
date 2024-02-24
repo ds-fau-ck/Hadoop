@@ -26,7 +26,17 @@ create external table department_data_external
 
 Internal table: Metada in hive and original raw data in hive
 External tables only metadata in Hive
-How to back up table tada---
+####################How tocreate  back up table tada---
 create table sales_table_backup  as select * from sales_data_v2;
 ###################details about the table############
 describe extended sales_table_backup;
+# create a table which will store data in parquet
+create table sales_data_pq_final                                                                                                        
+    > (                                                                                                                                       
+    > product_type string,                                                                                                                    
+    > total_sales int                                                                                                                         
+    > )                                                                                                                                       
+    > stored as parquet;  
+    
+#####load data in parquet file#####
+from sales_data_v2 insert overwrite table sales_data_pq_final select *;
