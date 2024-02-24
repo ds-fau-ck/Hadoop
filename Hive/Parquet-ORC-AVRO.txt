@@ -1,1 +1,4 @@
+columnar-format
 
+The values for each column will be stored in a contigious memory location instead of entire row in a contigious memory location.
+NoSQL-Key-value, document, columnar For frequent or heavy analytical query
