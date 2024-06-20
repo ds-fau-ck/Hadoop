@@ -48,5 +48,5 @@ create table json_table
 load data local inpath 'file:///tmp/hive_class/json_file.json' into table json_table;
 # download this sales data
 
-https://github.com/shashank-mishra219/Hive-Class/blob/main/sales_order_data.csv
+
 
